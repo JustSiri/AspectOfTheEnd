@@ -1,0 +1,7 @@
+name: Aote
+version: ${project.version}
+main: justsiri.aspectoftheend.aote.Aote
+api-version: 1.16
+
+commands:
+  aote:
