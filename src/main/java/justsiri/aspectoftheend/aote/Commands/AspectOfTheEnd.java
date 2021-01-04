@@ -24,8 +24,10 @@ public class AspectOfTheEnd implements CommandExecutor {
             if (p.isOp()) {
                 item = new ItemStack(Material.DIAMOND_SWORD);
                 ItemMeta item_meta = item.getItemMeta();
-                item_meta.setDisplayName(ChatColor.GOLD + "Aspect Of The End");
+                item_meta.setDisplayName(ChatColor.WHITE + "끝의 조각");
                 ArrayList<String> item_lore = new ArrayList<>();
+                item_lore.add(" ");
+                item_lore.add(ChatColor.GRAY + "데미지: 27");
                 item_lore.add(" ");
                 item_lore.add(ChatColor.DARK_GRAY + "우클릭을 할 경우");
                 item_lore.add(ChatColor.DARK_GRAY + "바라보고 있는 곳으로");
@@ -33,6 +35,7 @@ public class AspectOfTheEnd implements CommandExecutor {
                 item_lore.add(" ");
                 item_lore.add(ChatColor.WHITE + "흔함");
                 item_meta.setLore(item_lore);
+                item_meta.setUnbreakable(true);
                 item.setItemMeta(item_meta);
                 p.getInventory().addItem(item);
                 p.sendMessage(ChatColor.YELLOW + "끝의 조각을 받았습니다.");
